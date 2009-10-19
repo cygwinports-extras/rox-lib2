@@ -1,0 +1,13 @@
+ORIG_PN=${PN}
+inherit python rox
+
+DESCRIPTION="ROX Python application library"
+SRC_URI="mirror://sourceforge/rox/${P}.tar.bz2"
+
+ROX_APP="ROX-Lib2"
+
+src_install() {
+	cd ${S}
+	rox_install
+	dosym rox/${ROX_APP} /usr/lib/${ROX_APP}
+}
