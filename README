@@ -9,13 +9,13 @@ menus, wizards, or druids.
 This package provides the common code used by all ROX Python programs.
 
 Runtime requirements:
-  python-2.5.4-10
-  python-gobject2.0-2.18.0-1
-  python-gtk2.0-2.16.0-1
+  python-2.6.5-1
+  python-gobject2.0-2.20.0-2
+  python-gtk2.0-2.16.0-2
   rox-filer-2.10-1
 
 Build requirements:
-  cygport-0.9.10-1
+  cygport-0.9.84-1
 
 Canonical website:
   http://roscidus.com/desktop/ROX-Lib
@@ -42,6 +42,9 @@ command-line: 'cygcheck -cd rox-lib2'.
 -------------------------------------------
 
 Port Notes:
+
+----- version 2.0.6-2 -----
+Rebuilt for Python 2.6.
 
 ----- version 2.0.6-1 -----
 Initial release for Cygwin 1.7.
