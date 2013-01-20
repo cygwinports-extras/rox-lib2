@@ -1,0 +1,24 @@
+ORIG_PN=${PN}
+inherit python rox
+
+NAME="rox-lib2"
+VERSION=2.0.6
+RELEASE=3
+CATEGORY="ROX"
+SUMMARY="ROX Python library"
+DESCRIPTION="ROX is a fast, user friendly desktop based on RISC OS which makes
+extensive use of drag-and-drop. The interface revolves around the file manager,
+or filer, following the traditional Unix view that 'everything is a file'
+rather than trying to hide the filesystem beneath start menus, wizards, or
+druids. This package provides the common code used by all ROX Python programs."
+SRC_URI="mirror://sourceforge/rox/${P}.tar.bz2"
+
+REQUIRES="rox-filer"
+
+ROX_APP="ROX-Lib2"
+
+src_install() {
+	cd ${S}
+	rox_install
+	mv ${D}/usr/lib/rox/${ROX_APP} ${D}/usr/lib/
+}
